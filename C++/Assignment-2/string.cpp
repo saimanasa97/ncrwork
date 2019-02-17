@@ -10,7 +10,9 @@ public:
     len=l;
     strcpy(str,p);
     }
-    ~String(){}
+    ~String(){
+    delete []str;
+    }
 
     String operator+(String &s){
     str=strcat(str,s.str);
@@ -21,7 +23,8 @@ public:
         return str[n];
     }
     String operator=(String &s){
-        str=new char[s.len];
+        delete [] str;
+        str=new char[s.len +1];
         strcpy(str,s.str);
         len=s.len;
         return *this;
