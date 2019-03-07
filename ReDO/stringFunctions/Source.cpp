@@ -67,10 +67,10 @@ int main()
 		break;
 	case 2:strcpy(s2, s); printf("%s ", s2);
 		break;
-	case 3:printf("enter string2\n"); scanf("%s", s2);
-		strcat(s, s2); printf("%s", s);
+	case 3:printf("enter string to concatenate\n"); scanf("%s", s2);
+		strcat(s, s2); printf("%[^\t\n]s", s);
 		break;
-	case 4:printf("enter string2\n"); scanf("%s", s2);
+	case 4:printf("enter string to compare\n"); scanf("%[^\t\n]s", s2);
 		res = strcmp(s, s2);
 		printf("%d", res);
 		break;

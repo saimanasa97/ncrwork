@@ -1,3 +1,13 @@
+/*
+4 cases:
+1. When digit is encountered, operand is computed and pushed to operand stack
+2. When ( is encountered, it is pushed to operator stack
+3. When ) is encountered, 2 opearands and an operator are popped & computed & result is pushed to operand stack -> until ( is encountered.
+4. When opearator is encountered check precendence, 
+	- if precendence is smaller than or equal to precedence of top operator, pop the top one and 2 operands & compute & push to opernd and then push the current operator to stack.
+When the end of the input is reached, pop 1 operator and 2 operands and keep comuting and pushing until stack is empty
+*/
+
 #include<stdio.h>
 #include<iostream>
 #include<stack>
@@ -16,10 +26,10 @@ int precedence(char op) {
 }
 int applyOp(int a, int b, char op) {
 	switch (op) {
-	case '+': return add(a,b);
-	case '-': return sub(a,b);
-	case '*': return mul(a,b);
-	case '/': return division(a,b);
+	case '+': return add(a, b); break;
+	case '-': return sub(a, b); break;
+	case '*': return mul(a, b); break;
+	case '/': return division(a, b); break;
 	}
 }
 
