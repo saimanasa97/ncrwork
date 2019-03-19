@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Calculator</title>
+</head>
+<body>
+    First number : <input id="n1" type="number" />
+    Second number : <input id="n2" type="number" />
+    Result: <input id="res" type="number" />
+    <input id="Button1" type="submit" value="Result" onclick="calculateSum()"/>
+    <script>
+        function calculateSum() {
+            var x =parseInt(document.getElementById("n1").value);
+            var y = parseInt(document.getElementById("n2").value);
+            document.getElementById("res").value = x + y;
+        }
+    </script>
+</body>
+</html>

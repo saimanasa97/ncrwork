@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Registration form</title>
+</head>
+<body style="background-color:pink;">
+<form>
+Name<input id="n" type="text" name="name of student" placeholder="enter ur name"/><br/>
+photo<input id="ph" type="file" accept="image/*" placeholder="upload your photo"/><br/>
+DoB<input id="dob" type="date"  placeholder="enter dateofbirth"/><br/>
+<input type="button" value="submit" id="one" onclick="CalculateAge()"/>
+           <!-- Age<input id="txtres"  type="number" name="age"/>-->
+<br/>
+</form>
+<script>
+      
+    function CalculateAge() {
+        var name_test = document.getElementById("n").value;
+        var name_reg = new RegExp('^[a-z A-Z]+$');
+        if (!name_reg.test(name_test)) { alert("enter valid name"); }
+    
+var curDate = new Date();
+
+ var curr_year = curDate.getFullYear();
+ var curr_month = curDate.getMonth();
+
+  
+  var dt1 = document.getElementById("dob").value;
+   var birth_date = new Date(dt1);
+
+        var birth_year = birth_date.getFullYear();
+        var birth_month = birth_date.getMonth();
+        var calc_year = curr_year - birth_year;
+        var calc_month = curr_month - birth_month;
+        if(calc_month<0)
+         {  calc_year=calc_year-1 ; }
+        final_result=calc_year.toString();
+
+     var field=document.createElement("input");
+           field.type="text";
+           field.id="two";
+           document.body.appendChild(field);
+       document.getElementById("two").value=final_result;
+
+}
+ 
+
+</script>
+
+</body>
+
+</html>

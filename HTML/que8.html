@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Paragraph experimenting</title>
+</head>
+<body>
+    <p id="p1" onclick="changeBackround()">This is a paragraph.
+    Click here to change background color and background image.</p>
+    <script>
+        function changeBackround() {
+            var ele = document.getElementById("p1");
+            ele.style.backgroundColor = "yellow";
+            document.body.style.backgroundImage = "url('img.png')";
+        }
+    </script>
+</body>
+</html>

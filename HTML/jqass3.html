@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<script src="jquery-3.3.1.js"></script>
+
+<script>
+$(document).ready(function(){
+$("#btn1").click(function(){
+	if($("#btn1").val() == "hide"){
+		$("#presentAddress").hide();
+		$("#btn1").val("show");
+	}
+	else{
+	$("#presentAddress").show();
+	$("#btn1").val("hide");
+	}
+});
+});
+</script>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>ShowHide</title>
+</head>
+<body>
+    <h4>Current Address:</h4>
+  <form id="presentAddress">
+     House No: <input id="hno" type="text" /><br />
+     Street Name: <input id="sname" type="text" /><br />
+     Landmark: <input id="landmark" type="text" /><br />
+     City: <input id="city" type="text" /><br />
+     Pincode: <input id="pincode" type="text" /><br />
+  </form>
+   
+    <h4>Permanet Address:</h4>
+    <input id ="chk1" type="checkbox"  /> Same as Current Address<br />
+    <form id="permanentAddress">
+        House No:<input id="hno" type="text" /><br />
+        Street Name:<input id="sname" type="text" /><br />
+        Landmark:<input id="landmark" type="text" /><br />
+        City: <input id="city" type="text" /><br />
+        Pincode:<input id="pincode" type="text" /><br />
+    </form>
+    <input id="btn1" type="submit" value="Hide"/>
+
+</body>
+</html>
