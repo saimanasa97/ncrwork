@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main(){
+//sample test program
+int *p,*q,a,b,c;
+char a[10];
+scanf("%d",&a,&b);
+p=(int*)malloc(sizeof(int)*4);
+q=(int*)calloc(6);
+free(p);
+printf("%d %d",*p,b);
+gets(a);
+return 0;
+}

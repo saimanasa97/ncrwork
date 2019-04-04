@@ -1,0 +1,5 @@
+﻿  analyse.cpp
+d:\master\ncrwork\project\project\analyse.cpp(39): warning C4129: '/': unrecognized character escape sequence
+d:\master\ncrwork\project\project\analyse.cpp(40): warning C4129: '/': unrecognized character escape sequence
+d:\master\ncrwork\project\project\analyse.cpp(51): warning C4129: '/': unrecognized character escape sequence
+  Project.vcxproj -> D:\master\ncrwork\Project\Debug\Project.exe
